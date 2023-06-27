@@ -1,0 +1,110 @@
+@import url(./fonts.css);
+@import url(./common.css);
+@import url(./reset.css);
+
+
+.bg-line-wrap{
+  position: fixed;
+  left: 0;top: 0;right: 0;bottom: 0;
+  z-index: 0;
+  display: flex;
+  margin: 0 auto;
+  max-width: 1198px;
+  justify-content: space-between;
+}
+.bg-line-wrap .bg-line{
+  width: 0.7px;
+  height: 100vh;
+  background: #00f1ec;
+  opacity: 0.3;
+}
+.wrapper {
+  background-color: #030414;
+}
+
+header{
+  position: sticky;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  padding: 15px 0;
+
+}
+header .group-flex {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+header .link-box{
+  margin-left: auto;
+}
+header .link-box .link{
+  margin-left: 34px;
+  transition: color 300ms ease;
+  font-weight: 400;
+  line-height: 18px;
+}
+header .link-box .link:hover{
+  color: #00f1ec;
+}
+
+footer {
+  position: relative;
+  height: 100vh;
+  padding: 200px 0;
+}
+footer .f-wrap{
+  width: 50%;
+  height: 60vh;
+}
+footer .f-wrap span{
+  display: block;
+  color: #00f1ec;
+  font-size: 82px;
+  line-height: 86px;
+  margin-bottom: 32px;
+}
+footer .f-wrap .link-contact {
+  display: inline-block;
+  padding: 20px 28px 20px;
+  color: #0330d0;
+  font-weight: 600;
+  background: #e2fffe;
+  letter-spacing: 2px;
+  font-size: 16px;
+  line-height: 16px;
+  border-radius: 50px;
+}
+footer .f-wrap .link-contact:hover{
+  box-shadow: 1px 1px 25px 1px hsl(0deg 0% 100% / 66%);
+  transform: scale(1.1);
+}
+footer .f-bottom{
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+footer .f-bottom .info-box{
+  color: #00f1ec;
+  font-size: 28px;
+  line-height: 40px;
+  font-weight: 300;
+}
+
+footer .f-bottom .social-box .link-social{
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  vertical-align: bottom;
+  margin-left: 24px;
+  cursor: pointer;
+}
+footer .f-bottom .social-box .link-social:nth-child(1){
+  background: url(https://www.toffeenutdesign.com/images/linkedin.svg) no-repeat;
+}
+footer .f-bottom .social-box .link-social:nth-child(2){
+  background: url(https://www.toffeenutdesign.com/images/dribbble.svg) no-repeat;
+}
+footer .f-bottom .social-box .link-social:nth-child(3){
+  background: url(https://www.toffeenutdesign.com/images/twitter.svg) no-repeat;
+}
