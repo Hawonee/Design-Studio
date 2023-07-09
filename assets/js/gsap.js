@@ -32,9 +32,8 @@ gsap.from(".sc-service .service-list .item", {
     trigger: ".sc-service",
     start: "0% 100%",
     end: "100% 0%",
-  }
+  },
 });
-
 
 //Brand box
 const brandBoxes = document.querySelectorAll(".brand-box");
@@ -57,8 +56,18 @@ brandBoxes.forEach((box) => {
 
 //WORK 배경색 바꾸기
 
+// hell = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: ".sc-work .inner",
+//     start: "0% 100%",
+//     end: "100% 0%",
+//     scrub: 1,
+//     pin: true,
+//   },
+// });
+// hell.to(".sc-work .inner", { xPercent: -100 });
 
-//Awards 
+//Awards
 gsap.from(".awards-area .slide", {
   opacity: 0,
   duration: 1,
@@ -69,7 +78,7 @@ gsap.from(".awards-area .slide", {
     start: "0% 50%",
     end: "100% 0%",
     markers: false,
-  }
+  },
 });
 // gsap.from(".awards-area .badge.wrap", {
 //   opacity: 0,
@@ -83,6 +92,36 @@ gsap.from(".awards-area .slide", {
 //   }
 // });
 
+let works = gsap.utils.toArray(".works-item");
+
+gsap.to(works, {
+  xPercent: -300,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".works-list",
+    pin: true,
+    scrub: 1,
+    snap: 1 / (works.length - 1),
+    start: "0 20%",
+    end: "+=1000",
+    // end: document.querySelector("#parallax__cont").offsetWidth
+  },
+});
+
+let webs = gsap.utils.toArray(".web-item");
+gsap.to(webs, {
+  xPercent: -300,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".web-work-area",
+    pin: true,
+    scrub: 1,
+    // snap: 1 / (webs.length - 1),
+    end: "+=4000",
+    // end: document.querySelector("#parallax__cont").offsetWidth
+  },
+});
+
 gsap.from(".deco-txt", {
   scrollTrigger: {
     trigger: ".deco-txt",
@@ -93,8 +132,6 @@ gsap.from(".deco-txt", {
   duration: 1,
   y: 80,
 });
-
-
 
 //Footer 배경색
 // gb

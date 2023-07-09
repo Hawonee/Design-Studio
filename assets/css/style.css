@@ -251,7 +251,6 @@ main {
 }
 .sc-work .container {
   width: 100%;
-  overflow: hidden;
 }
 .sc-work .works-list {
   display: flex;
